@@ -1,5 +1,3 @@
-# azure-website
-
 ## Project Overview
 
 This project is built with Craft CMS 5, Alpine.js, Tailwind CSS 3, and Gulp, aiming to provide a robust and flexible foundation for web development. Craft CMS empowers content creators with a user-friendly interface while offering developers a powerful framework for building dynamic websites. Alpine.js enhances interactivity on the client-side with its lightweight and reactive JavaScript framework. Tailwind CSS provides utility-first styling, enabling rapid development and easy customization. Gulp automates tasks such as compiling SCSS, minifying JavaScript, and optimizing assets, streamlining the development process.
