@@ -1,0 +1,30 @@
+dateModified: 1712646541
+email:
+  fromEmail: marius@tribes.agency
+  fromName: 'Azure Website'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5e69257a-1340-4e13-9ab0-1481add73e7c: Homepage # Homepage
+    9d422645-22d6-4617-af7b-2055c66fdbc4: 'Azure Website' # Azure Website
+    111d2d01-deb5-4542-a346-a475708f3f90: Homepage # Homepage
+    369e3e23-e7f6-450d-b1e1-804be12fc5f3: 'Public Schema' # Public Schema
+    fbee1ec9-00d0-42e1-9b13-d55b38d61703: 'Azure Website' # Azure Website
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Azure Website'
+  schemaVersion: 5.0.0.20
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

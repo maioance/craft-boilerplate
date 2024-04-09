@@ -1,0 +1,104 @@
+{
+  "name": "azure-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=18.20.1"
+  },
+  "env": {
+    "local": "http://azure-website.test/"
+  },
+  "paths": {
+    "dependencies": "node_modules/",
+    "public": "web/",
+    "templates": "templates/",
+    "dist": {
+      "base": "dist/",
+      "css": "dist/css/",
+      "images": "dist/images/",
+      "js": "dist/js/"
+    },
+    "assets": {
+      "base": "src/",
+      "scss": "src/scss/",
+      "js": "src/js/",
+      "images": "src/images/",
+      "fonts": "src/fonts/"
+    }
+  },
+  "files": {
+    "tailwind": "./tailwind.config.js",
+    "dist": {
+      "css": "index.css",
+      "js": "index.js"
+    },
+    "assets": {
+      "scss": "app.scss",
+      "js": "index.js"
+    }
+  },
+  "cssDependencies": [],
+  "purgeCss": {
+    "whitelist": [],
+    "whitelistPatterns": [
+      "lazy-load.*",
+      "flickity.*",
+      "aos.*"
+    ]
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.8"
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "prod": " NODE_ENV=prod gulp prod",
+    "setup": "git pull && npm install && composer install && ./craft migrate/all --interactive=0 && ./craft project-config/apply --interactive=0 && gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tribes-Agency/azure-website.git"
+  },
+  "keywords": [],
+  "author": "maioance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tribes-Agency/azure-website/issues"
+  },
+  "homepage": "https://github.com/Tribes-Agency/azure-website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/register": "^7.23.7",
+    "@vue/compiler-sfc": "^3.4.21",
+    "autoprefixer": "^10.4.19",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^6.1.2",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^8.0.0",
+    "rev-del": "^2.0.0",
+    "sass": "^1.74.1",
+    "tailwindcss": "^3.4.3",
+    "vue": "^3.4.21",
+    "vue-loader": "^17.4.2",
+    "webpack-merge": "^5.10.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Azure Website'
+primary: true
+siteGroup: fbee1ec9-00d0-42e1-9b13-d55b38d61703 # Azure Website
+sortOrder: 1

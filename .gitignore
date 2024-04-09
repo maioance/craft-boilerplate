@@ -1,0 +1,45 @@
+node_modules
+/craft/storage/*
+!/craft/storage/rebrand
+# OS Files
+
+.DS_Store
+*.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Craft CMS
+
+cpresources
+vendor
+.env
+.env.*
+.env.sh
+*.log
+storage/*
+license.key
+
+# Backups
+
+backups
+
+# Caching
+
+web/cache
+public/cache
+public_html/cache
+cache/*
+
+# Editor directories and files
+
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
