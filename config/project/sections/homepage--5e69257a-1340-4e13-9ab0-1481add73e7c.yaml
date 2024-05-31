@@ -19,9 +19,9 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  9d422645-22d6-4617-af7b-2055c66fdbc4: # Azure Website
+  9d422645-22d6-4617-af7b-2055c66fdbc4: # Craft Boilerplate
     enabledByDefault: true
     hasUrls: true
-    template: null
+    template: _page/homepage.twig
     uriFormat: __home__
 type: single

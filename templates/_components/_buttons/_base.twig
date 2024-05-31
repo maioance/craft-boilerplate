@@ -1,0 +1,21 @@
+{% set baseClass = '
+    inline-block
+    py-3
+    px-7
+    rounded-lg
+    text-center
+    uppercase
+' %}
+
+{% set class = class is defined ? baseClass ~ ' ' ~ class ~ ' ' ~ customClass : baseClass %}
+{% set type = type is defined ? type : 'button' %}
+{% set url = button.linkAddress ?? (button.entries.one().url ?? '#') %}
+
+<{{ type }}
+    {{ type == 'a' ? ('href=' ~ url ~ '') }}
+{{ button.openInNewTab == "yes" ? 'target=_blaank' : '' }}
+class="{{ class }}"
+{{ attributes is defined ? attributes|raw }}
+>
+{{ button.title }}
+</{{ type }}>

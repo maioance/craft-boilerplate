@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Azure Website'
+name: 'Craft Boilerplate'
 primary: true
-siteGroup: fbee1ec9-00d0-42e1-9b13-d55b38d61703 # Azure Website
+siteGroup: fbee1ec9-00d0-42e1-9b13-d55b38d61703 # Craft Boilerplate
 sortOrder: 1

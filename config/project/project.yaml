@@ -1,24 +1,39 @@
-dateModified: 1712646541
+dateModified: 1717151919
 email:
   fromEmail: marius@tribes.agency
-  fromName: 'Azure Website'
+  fromName: 'Craft Boilerplate'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: assets/images
+    type: craft\fs\Local
+    url: '@web/assets/images'
 meta:
   __names__:
     5e69257a-1340-4e13-9ab0-1481add73e7c: Homepage # Homepage
-    9d422645-22d6-4617-af7b-2055c66fdbc4: 'Azure Website' # Azure Website
+    9d422645-22d6-4617-af7b-2055c66fdbc4: 'Craft Boilerplate' # Craft Boilerplate
+    45c8f886-15d2-4f91-9bde-313a9bd0b4f8: Hero # Hero
     111d2d01-deb5-4542-a346-a475708f3f90: Homepage # Homepage
     369e3e23-e7f6-450d-b1e1-804be12fc5f3: 'Public Schema' # Public Schema
-    fbee1ec9-00d0-42e1-9b13-d55b38d61703: 'Azure Website' # Azure Website
+    a77afd53-564c-418e-b9c8-d21ba51fbfb2: Images # Images
+    abde5f4d-c2fa-4bb5-8c32-599b58fe6a3c: 'Page Blocks' # Page Blocks
+    fbee1ec9-00d0-42e1-9b13-d55b38d61703: 'Craft Boilerplate' # Craft Boilerplate
 plugins:
   assetrev:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true
-  name: 'Azure Website'
+  name: 'Craft Boilerplate'
   schemaVersion: 5.0.0.20
   timeZone: America/Los_Angeles
 users:

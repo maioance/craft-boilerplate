@@ -1,6 +1,6 @@
-color: green
+color: blue
 fieldLayouts:
-  20d1e642-4b79-40d6-9720-b913b92439fb:
+  7c088e3d-5ca5-419f-a68a-668195c76ba8:
     tabs:
       -
         elementCondition: null
@@ -30,32 +30,17 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e8a1008d-e1a7-45e7-b68c-a0667c3ec894
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: abde5f4d-c2fa-4bb5-8c32-599b58fe6a3c # Page Blocks
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 46d9674d-9f72-4562-a627-82c2a5b58138
+            uid: c032f30f-b0d5-4b5c-a335-1a37dfbcb11d
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: e6261574-bba2-4f0b-ae21-adf855a41c8e
+        uid: 1c9156a4-4721-477d-abe0-aa698055dfe5
         userCondition: null
-handle: homepage
+handle: hero
 hasTitleField: true
-icon: house
-name: Homepage
+icon: cubes
+name: Hero
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

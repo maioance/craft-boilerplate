@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ craft.app.language|slice(0,2) }}">
+{% set seo = getSeoField() %}
+{% if seo is null or seo.title == '' %}
+    {% set seo = craft.seo.custom(siteName, '', false) %}
+{% endif -%}
+{% set locale = craft.app.locale %}
+{% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ rev('/dist/css/app.css') }}">
+
+    <title>{{ seo.title }}</title>
+    <meta name="description" content="{{ seo.description }}" />
+
+    {% set fb = seo.social.facebook -%}
+    <meta property="fb:app_id" content="{{ fb.handle }}">
+    <meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ fb.title }}" />
+    <meta property="og:image" content="{{ craft.seo.facebookImage(fb.image) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="{{ fb.description }}" />
+    <meta property="og:site_name" content="{{ siteName }}" />
+    <meta property="og:locale" content="{{ locale|replace('-', '_') }}" />
+    {% for locale in locales -%}
+        <meta property="og:locale:alternate" content="{{ locale|replace('-', '_') }}" />
+    {% endfor %}
+
+    {% set tw = seo.social.twitter -%}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ tw.handle }}" />
+    <meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
+    <meta name="twitter:title" content="{{ tw.title }}" />
+    <meta name="twitter:description" content="{{ tw.description }}" />
+    <meta name="twitter:image" content="{{ craft.seo.twitterImage(tw.image) }}" />
+
+    {% if seo.robots -%}
+        <meta name="robots" content="{{ seo.robots }}" />
+    {% endif %}
+    {%- if seo.expiry -%}
+        <meta name="robots" content="unavailable_after: {{ seo.expiry }}" />
+    {% endif %}
+</head>
+
+<body>
+<div id="app">
+    {% include '_layout/header' %}
+    {% block body %}{% endblock %}
+</div>
+
+{% include '_layout/footer' %}
+{# Javascript #}
+<script src="{{ rev('/dist/js/manifest.js') }}"></script>
+{# If no 3rd-party JS libraries are being imported, vendor.js may not exist in production builds. Delete the following line if that's the case #}
+<script src="{{ rev('/dist/js/vendor.js') }}"></script>
+<script src="{{ rev('/dist/js/app.js') }}"></script>
+</body>
+</html>

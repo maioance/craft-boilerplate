@@ -4,6 +4,7 @@
   "require": {
     "clubstudioltd/craft-asset-rev": "8.0.0",
     "craftcms/cms": "5.0.1",
+    "ether/seo": "v5.0.0-rc3",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

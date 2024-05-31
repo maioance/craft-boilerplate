@@ -1,8 +1,17 @@
 <?php
-return array(
-    '*' => array(),
-    'production' => array(
-        'manifestPath' => 'rev-manifest.json',
-        'assetsBasePath' => '../' . getenv('PUBLIC_FOLDER') . '/dist/'
-    )
-);
+
+return [
+    '*' => [
+        'strategies' => [
+            'manifest' => \club\assetrev\utilities\strategies\ManifestFileStrategy::class,
+            'querystring' => \club\assetrev\utilities\strategies\QueryStringStrategy::class,
+            'passthrough' => function ($filename, $config) {
+                return $filename;
+            },
+        ],
+        'pipeline' => 'manifest|querystring|passthrough',
+        'manifestPath' => 'web/mix-manifest.json',
+        'assetsBasePath' => '../web/dist',
+        'assetUrlPrefix' => '@web',
+    ],
+];
